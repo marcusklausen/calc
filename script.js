@@ -5,6 +5,11 @@ let selectedFunc = "";
 
 func.addEventListener('click', function(event){
     selectedFunc = event.target.id
+    console.log(event.target.parentNode);
+    func.querySelectorAll('div' ).forEach(function(element) {
+        element.style.background = 'none';
+    });
+
     event.target.style.background = "brown";
 });
 
